@@ -1,0 +1,183 @@
+%-------------------------
+% Resume in Latex
+% Author: Guoze Tang
+% License: MIT
+%------------------------
+
+\documentclass[letterpaper,10.5pt]{article}
+
+% Some Package which are need for this resume
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{scrextend}
+\usepackage{blindtext}
+\usepackage{mdwlist}
+\usepackage{color}
+\usepackage{ragged2e}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% \usepackage{mathspec}
+% \setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+% \setitemize[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+% \setdescription{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+% \setitemize[0]{leftmargin=30pt,itemindent=10pt}
+% \setitemize[0]{itemindent=10pt}
+
+% \setmainfont{Times New Roman}
+% \setmathsfont{Times New Roman}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+% \renewcommand{\rmdefault}{phv} % Arial
+% \renewcommand{\sfdefault}{phv} % Arial
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\emailsymbol}{\faAt}
+\newcommand{\phonesymbol}{\faPhone}
+\newcommand{\homepagesymbol}{\faChain}
+\newcommand{\locationsymbol}{\faMapMarker}
+\newcommand{\linkedinsymbol}{\faLinkedin}
+\newcommand{\twittersymbol}{\faTwitter}
+\newcommand{\githubsymbol}{\faGithub}
+\newcommand{\orcidsymbol}{\aiOrcid}
+\newcommand{\mailsymbol}{\faEnvelope}
+
+% Adjust margins
+\geometry{left=0.8cm,right=0.8cm,top=0.7cm,bottom=0.7cm }
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\definecolor{Subitemcolor}{RGB}{2.00,113.00,192.00}
+% \definecolor{Subitemcolor}{RGB}{79.00,109.00,148.00}
+\titleformat{\section}{
+  \vspace{-9pt}
+  \scshape\raggedright\large\color{Subitemcolor}
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\detailItem}[2]{
+\justifying
+\vspace{-1pt}
+  \item
+  \small{
+    \textbf{#1}{: #2 
+    \vspace{-4pt}}
+  }
+}
+% Information formatting
+\newcommand{\Myinformation}[5]{
+\begin{center}
+    {\LARGE \usefont{OT1}{phv}{b}{n} #1} \\
+    \begin{tabular}{llll}{
+        \vspace{+2pt}}
+        \small #2 $| $& \href{mailto: #3} \small\color{blue}{ #3 }  & $|$ \small{#4 } &$|$ \href{#5} \small\color{blue}{#5}\\
+    \end{tabular}
+    \vspace{-8pt}
+\end{center}
+}
+
+% Education formatting
+\newcommand{\educationSubItem}[4]{
+
+  \vspace{-0pt}
+    \begin{tabular*} {1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        % \textbf{#1} \textit{\small{\usefont{OT1}{phv} - #2}} & \textit{\small #3  }\textbf{\small {  #4}}\\
+      \textbf{#1}\textit{\fontfamily{bch} \small{ - #2}} & \textit{\small #3  }\textbf{\small {  #4}}\\
+    \end{tabular*}
+  \vspace{-0.4cm}
+}
+
+% \newcommand{\educationSubIte}[4]{
+%   \vspace{0pt}
+%     \begin{tabular*} {1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1}\textit{\small{ - #2}} & \textit{\small #3  }\textbf{\small {  #4}}\\
+%     \end{tabular*}
+%   \vspace{0pt}
+% }
+
+% Skill formatting
+\newcommand{\skillSubItem}[2]{
+    \detailItem{#1}{#2}
+    \vspace{-2pt}}
+
+% Experience formatting
+\newcommand{\experienceSubItem}[4]{
+  \vspace{-2pt}
+    \begin{tabular*} {1\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small#2} \\
+    %   \textbf{#1} & \small#2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}
+  \vspace{-2pt}
+}
+% Project formatting
+\newcommand{\detaiprojectlItem}[1]{
+\justifying
+    \vspace{+0pt}
+  \item
+  \small{#1}
+    \vspace{-6pt}
+}
+\newcommand{\projectSubItem}[3]{
+  \vspace{+1pt}
+    \begin{tabular*} {1.00\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    %   \textbf{#1}\textit{\small{ #2}} &\small#3
+      \textbf{#1}\textit{\small{ #2}} &\textbf{\small#3}
+    \end{tabular*}
+  \vspace{-0.3cm}
+}
+
+% honors formatting
+\newcommand{\honorslItem}[1]{
+\justifying
+  \item
+  \small{\textbf{#1} }
+%   \small{#1}
+  \vspace{-7pt}
+}
+
+% \renewcommand{\labelitemii}{$\circ$}
+
+%-----------Configure the List----------------------
+\newcommand{\subHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\subHeadingListEnd}{\end{itemize}}
+\newcommand{\subItemListStart}{\begin{flushleft}}
+\newcommand{\subItemListEnd}{\end{flushleft}\vspace{-15pt}}
+\newcommand{\detailItemListStart}{\begin{itemize}\vspace{-8pt}}
+\newcommand{\detailItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%-------------------------------------------
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% ---------Information-----------------
+\Myinformation {Guoze(Terry) Tang}
+{220 Elm St APT 533, Clemson, SC 29631}
+% {220 Elm St, University Place, Clemson, SC 29631}
+{guozet@g.clemson.edu} {(475) 655-8641} {http://guozet.me}
+
+\input{src/resume_job/education.tex}
+\input{src/resume_job/skills.tex}
+\input{src/resume_job/experience.tex}
+\input{src/resume_job/projects.tex}
+\input{src/resume_job/honors.tex}
+
+\end{document}

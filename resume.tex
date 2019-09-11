@@ -1,0 +1,109 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[10.5pt, letterpaper]{awesome-cv}
+\graphicspath{{images/}}
+% Configure page margins with geometry
+\geometry{left=0.6cm, top=0.6cm, right=0.6cm, bottom=0.6cm, footskip=.1cm}
+% \geometry{left=0.75in,top=0.6in,right=0.75in,bottom=0.6in}
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlight8
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+% \photo[circle,noedge,left]{guoze_profile}
+\name{Guoze(Terry)}{Tang}
+% \position{Graduate Student \& Assistant Research at Clemson University}
+% \address{220 Elm St APT 533, Clemson, SC 29631}
+\address{220 Elm St APT 533, Clemson, SC 29631}
+\mobile{(475) 655-8641}
+\email{guozet@g.clemson.edu}
+% \homepage{http://www.guozet.me}
+% \extrainfo{220 Elm St APT 533, Clemson, SC 29631}
+\github{guozetang}
+\linkedin{guoze}
+% \extrainfo{220 Elm St APT 533, Clemson, SC 29631}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% \makecvfooter
+%   {\today}
+%   {Guoze Tang~~~·~~~Resume}
+%   {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{src/resume/education.tex}
+\input{src/resume/skills.tex}
+\input{src/resume/experience.tex}
+\input{src/resume/projects.tex}
+\input{src/resume/honors.tex}
+% \input{coverletter.tex}
+
+%-------------------------------------------------------------------------------
+\end{document}

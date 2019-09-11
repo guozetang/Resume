@@ -1,0 +1,147 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[12pt, letterpaper]{awesome-cv}
+\graphicspath{{images/}}
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[circle,noedge,left]{guoze_profile}
+\name{Guoze}{Tang}
+% \position{Software Engineer{\enskip\cdotp\enskip}Embedded Engineer}
+\address{220 Elm St APT 533, Clemson, SC 29631}
+\mobile{(475) 655-8641}
+\email{guozet@g.clemson.edu}
+\homepage{http://www.guozet.me}
+\github{guozetang}
+\linkedin{guoze}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra informations}
+
+% \quote{``Be the change that you want to see in the world."}
+
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Company Recruitment Team}
+  {Google Inc.\\1600 Amphitheatre Parkway\\Mountain View, CA 94043}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Software Engineer}
+% How the letter is opened
+% Recruiting Manager
+% \letteropening{Dear Mr./Ms./Dr. LastName,}
+\letteropening{Dear Recruiting Manager,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+\letterenclosure[Attached]{Resume}
+
+%-----------------Setting For the Context----------------------------
+\newcommand{\applyposition}{Software Enginnner}
+\newcommand{\companyname}{Google}
+\newcommand{\myemailaddress}{guozet@g.clemson.edu}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[R]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Guoze Tang~~~·~~~Cover Letter}
+  {}
+
+% Print the title with above letter informations
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+% \lettersection{About Me}
+
+My name is Guoze Tang and I am currently a graduate student in the School of Computing in Clemson University. I was recently introduced to your firm via BBB （Contact at Firm）and was impressed with what I learned of [Your Culture / Working Environment / Company-Specific Info.]. I am interested in pursuing an Investment Analyst position at your firm, and have enclosed my resume and background information below.
+
+Please accept this letter and resume as my application for the \applyposition{} position at \companyname{}. I learned of this opportunity after speaking with Jane Doe in the accounting department. In May, I will complete my Bachelor of Science in Accounting and have the desire to become a Certified Internal Auditor.
+
+In the second paragraph, describe your interest and knowledge of the company or organization, and show how you are qualified for the position. Elaborate on information in your resume, but do not repeat it. Be concise and give specific examples of your skills. For example, "As you can see from my resume, I have three years of experience in management'.
+
+Thank you for your time and consideration of my resume and qualifications. The Internal Auditor position provides the opportunity for me to make an immediate impact in the accounting department at XYZ Bank and provides the opportunity to accomplish my goal of becoming a Certified Internal Auditor. I can be reached at (000) 555-0000 or \myemailaddress{} to further discuss my qualifications.
+
+
+
+\end{cvletter}
+
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter informations
+\makeletterclosing
+
+\end{document}
